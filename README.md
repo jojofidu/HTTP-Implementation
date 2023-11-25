@@ -23,6 +23,10 @@ To launch needs to give a --directory CLI argument, where it will create and fet
 $ python3 /home/filipe/Desktop/codecrafters/codecrafters-http-server-python/app/main.py --directory /home/filipe/Desktop/codecrafters/codecrafters-http-server-python/files
 ```
 
+Was created a script to run server (it will store files in /files), all we need to run is:
+```shell
+$ ./run_server.sh
+```
 
 ## Testing
 
@@ -80,6 +84,7 @@ HTTP:
 
 - Add tests, both in e2e/integration/unit. maybe having a script with curl calls?
 - Learn more of http "edge-cases"
+- Logs (my own version or Python's logging module)
 - Use/Add Enums
 - My http implementation seems static. In real servers i will use netcat and send data in segments and server will retain and parse http only when it gives last CRLF (notifying that http request is sent). But in my implementation server parses as what it gets as a whole which is not conformant with real life it seems. Python has libraries that do this "from http.server import BaseHTTPRequestHandler, HTTPServer" (ask chatgpt for example). I would like to implement it like so in the future.
 
